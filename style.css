@@ -1,0 +1,585 @@
+body{
+    overflow-x: hidden;
+}
+
+header{
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    background: linear-gradient(black, rgb(0, 0, 0),transparent);
+    height: 7rem;
+}
+
+.navCont{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background:transparent;
+}
+
+#right-carousel{
+    z-index: 4;
+}
+
+.collapse.navbar-collapse{
+    display: flex;
+    gap: 10px;
+}
+
+.container-fluid {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-toggler-icon{
+    background-color: rgb(77, 76, 76);
+    color: wheat;
+}
+
+.navbar-nav{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 4rem;
+}
+
+.dropdown .btn{
+    background-color: transparent;
+    color: white;
+}
+
+.dropdown:hover{
+    color: red;
+    border: none;
+}
+
+.dropdown-toggle.show{
+    border: none;
+    color: white !important;
+}
+
+.dropdown-item , .dropdown-menu.show{
+    background: black !important;
+    color: white !important;
+}
+
+.btn:hover{
+    color: red;
+}
+
+main{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    background-color: black;
+}
+
+.hero{
+    position: relative;
+    width: 100%;
+    min-height: 50vh; 
+    height: auto;
+}
+
+.series-title{
+    position: absolute;
+    float: right;
+    width: 80%;
+    top:40%;
+    right:6rem;
+    padding-left: 20px;
+    color: red;
+    font-size: 3rem;
+    font-weight: bold;
+   
+}
+
+
+.series-desc{
+    position: absolute;
+    width: 70%;
+    top: 50%;
+    float:right;
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    right: 11rem;
+    padding-left: 20px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 2px black;
+    background: linear-gradient(to left, transparent ,  transparent,black transparent);
+    backdrop-filter: blur(2px);
+}
+
+.series-content{
+    position: absolute;
+    height: 100%;
+    width: 41%;
+    right: 0;
+    top: 0px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to left, black 20%,  transparent);
+  backdrop-filter: blur(5px);
+}
+
+.cast{
+    z-index: 3;
+    position: relative;
+    bottom: 6rem;
+    background: linear-gradient(to top,black 70%, black, transparent);
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-container{
+    position: relative;
+    display: flex;
+    gap: 20px;
+    left: 2rem;
+}
+
+
+.card.card-character .card-img-top{
+  border: 2px solid rgb(223, 12, 12);
+}
+
+.cast h2{
+    position: relative;
+    left: 2rem;
+}
+
+.episodes{
+    position: relative;
+    background: linear-gradient(to top,black 70%, black, transparent);
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-container2{
+    position: relative;
+    display: flex;
+    gap: 15px;
+    left: 2rem;
+    margin-bottom: 2rem;
+    scrollbar-width: 90%;
+}
+
+.card-overflow{
+    overflow: scroll;
+}
+
+.card-overflow-mobile{
+    overflow: hidden;
+}
+
+
+.card.card-episode .card-img-top{
+    border: 2px solid rgb(223, 12, 12);
+}
+
+.episodes h2{
+    position: relative;
+    left: 2rem;
+}
+
+
+footer{
+    min-height: 90px;
+    background-color: black;
+    border-top: 1px solid rgb(56, 56, 56);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copy{
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+
+
+
+
+
+
+@media(max-width:1500px){
+    .hero{
+        display: flex;
+        flex-direction: column;
+        position: static;
+    }
+
+    main{
+        display: flex;
+        gap: 20px;
+    }
+
+    .card-overflow{
+        display: flex;
+    }
+    .series-content{
+        position: static;
+        width: 90%;
+        backdrop-filter: none;
+        background: none;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        height: auto;
+    }
+    .series-title{
+    position: static;
+    width: fit-content; 
+    color: red;
+    font-size: 2.5rem;
+    font-weight: bold;
+    }
+
+    .series-title h1{
+        color: red;
+    }
+
+    .cast{
+        position: static;
+    }
+
+    .series-desc{
+        position: static;
+    width: 100%;
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    right: 11rem;
+    padding-left: 20px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 2px black;
+    background: linear-gradient(to left, transparent ,  transparent,black transparent);
+    }
+}
+
+@media (max-width: 1024px) {
+    
+    main{
+        overflow-x: hidden;
+    }
+    .navbar-nav{
+        width: 100%;
+        height: 100%;
+        background-color: black;
+    }
+    #right-carousel{
+        z-index: 1;
+    }
+
+    .hero{
+        display: flex;
+    }
+
+    .series-content{
+    width: 70%;
+    top: 50%;
+    float:right;
+    right: 11rem;
+    padding-left: 20px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 2px black;
+    background: linear-gradient(to left, transparent ,  transparent,black transparent);
+    backdrop-filter: blur(2px);
+    }
+    
+    body {
+        overflow-x: hidden;
+    }
+    header{
+        display: block;
+    }
+    #nav-mobile{
+        width: 100%;
+    }
+    .series-content {
+        backdrop-filter: none;
+        background: transparent;
+        width: 80%;
+        right: 5%;
+        padding: 10px;
+    }
+
+    .series-title h1 {
+        font-size: 2rem;
+        color: red;
+    }
+    .series-desc {
+        font-size: 1rem;
+    }
+    .hero{
+        display: flex;
+        flex-direction: column;
+        position: static;
+    }
+
+    main{
+        display: flex;
+        gap: 20px;
+    }
+
+    .card-overflow{
+        display: flex;
+    }
+    .series-content{
+        position: static;
+        width: 90%;
+        backdrop-filter: none;
+        background: none;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        height: auto;
+    }
+    .series-title{
+    position: static;
+    width: fit-content; 
+    color: red;
+    font-size: 2.5rem;
+    font-weight: bold;
+    }
+
+    .series-title h1{
+        color: red;
+    }
+
+    .cast{
+        position: static;
+    }
+
+    .series-desc{
+        position: static;
+    width: 100%;
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    right: 11rem;
+    padding-left: 20px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 2px black;
+    background: linear-gradient(to left, transparent ,  transparent,black transparent);
+    }
+}
+
+
+@media (max-width: 768px) {
+    
+    body{
+        overflow-x: hidden;
+    }
+    .series-title{
+        margin: auto;
+    }
+    .navbar-nav{
+        width: 100%;
+        height: 100%;
+        background-color: black;
+    }
+    #right-carousel{
+        z-index: 1;
+    }
+    
+    header{
+        display: block;
+    }
+    #nav-mobile{
+        width: 100%;
+    }
+    .navbar-toggler{
+        z-index: 5;
+    }
+    .navbar-collapse {
+        text-align: center;
+    }
+    .navbar-nav {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    
+    .series-content {
+        width: 100%;
+        right: 0;
+        text-align: center;
+        padding: 10px;
+        backdrop-filter: none; 
+        background: transparent;
+    }
+    
+    .series-title h1 {
+        font-size: 1.5rem;
+    }
+    .series-desc {
+        font-size: 0.9rem;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+     
+    .card-overflow,
+    .card-container {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+        padding-bottom: 10px;
+    }
+    .card-overflow-mobile,
+    .card-container {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+        padding-bottom: 10px;
+        flex-shrink: 0;
+    }
+
+    .card-container2,
+    .card-container {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 15px;
+    }
+
+    .card {
+        flex: 0 0 auto;
+        width: 240px;
+        scroll-snap-align: start;
+        word-wrap: break-word;
+    }
+
+    .card-body {
+        white-space: normal; 
+        overflow: hidden;
+    }
+
+    .card-overflow::-webkit-scrollbar,
+    .card-container::-webkit-scrollbar {
+        height: 5px;
+    }
+    .card-overflow::-webkit-scrollbar-thumb,
+    .card-container::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 5px;
+    }
+    .card-overflow-mobile::-webkit-scrollbar,
+    .card-container::-webkit-scrollbar {
+        height: 5px;
+    }
+    .card-overflow-mobile::-webkit-scrollbar-thumb,
+    .card-container::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 5px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    
+    body{
+        overflow-x: hidden;
+    }
+    .navbar-nav{
+        width: 100%;
+        height: 100%;
+        background-color: black;
+    }
+    #right-carousel{
+        z-index: 1;
+    }
+    .navbar-nav{
+        width: 100%;
+    }
+    header{
+        display: block;
+    }
+    #nav-mobile{
+        width: 100%;
+    }
+    .series-content {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        backdrop-filter: none; 
+        background: transparent;
+    }
+
+    .series-title{
+        margin: auto;
+    }
+    
+    h1{
+        font-size: 1.3rem;
+        color: red;
+    }
+    .series-desc {
+        font-size: 0.8rem;
+        width: 95%;
+    }
+
+    
+    .card-overflow,
+    .card-container {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        scrollbar-width: thin;
+        padding-bottom: 10px;
+    }
+    .card-overflow-mobile,
+    .card-container {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        scrollbar-width: thin;
+        padding-bottom: 10px;
+        flex-shrink: 0;
+    }
+
+    .card-container2,
+    .card-container {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 10px;
+    }
+
+    .card {
+        width: 200px;
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+        word-wrap: break-word;
+    }
+
+    .card-body {
+        white-space: normal;
+        overflow: hidden;
+    }
+
+    footer {
+        text-align: center;
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+
+  
