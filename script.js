@@ -7,10 +7,11 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     document.querySelector(".navbar-brand").textContent = `${data.series.ott}`;
 
-    data.series.forEach((series) => {
-      ` <div class="carousel-item active">
-              <img src="${data.series.img}" class="d-block w-100 img-fluid" alt="..." />
-            </div>`;
+    const carouselItems = document.querySelectorAll(".src");
+    carouselItems.forEach((imgElement) => {
+      if (data.series.img) {
+        imgElement.src = data.series.img;
+      }
     });
 
     document.querySelector(
